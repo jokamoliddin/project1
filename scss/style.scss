@@ -1,0 +1,122 @@
+@import url("https://www.google.com/fonts/specimen/Montserrat");
+@import url("https://www.google.com/fonts/specimen/Open+Sans");
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #4c5eab;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &>.container {
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .brand {
+            height: 150px;
+            width: 570px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+
+            &__logo {
+                height: 100%;
+                width: 150px;
+                border-radius: 50%;
+                background: #88f;
+            }
+
+            &__title {
+                font-size: 24px;
+                font-family: "OpenSans", sans-serif;
+
+                &>.name {
+                    font-size: 36px;
+                    font-weight: bold;
+                    font-family: "Montserrat", sans-serif;
+                }
+            }
+        }
+
+        & .menu {
+            margin: 0;
+            padding: 0;
+            width: 280px;
+
+            & li {
+                display: flex;
+                padding-bottom: 10px;
+                position: relative;
+                justify-content: flex-start;
+
+                &::before {
+                    background-size: cover;
+                    background-position: center;
+                }
+
+
+
+                &:nth-of-type(1)>a>div {
+                    background-image: url('../img/gulpfile.js.png');
+                }
+
+                &:nth-of-type(2)>a>div {
+                    background-image: url('../img/globe.png');
+                }
+
+                &:nth-of-type(3)>a>div {
+                    background-image: url('../img/telephone.png');
+                }
+
+                & a {
+                    font-family: serif;
+                    font-family: "OpenSans", sans-serif;
+                    display: flex;
+
+                    &:hover {
+                        opacity: 50%;
+                    }
+
+
+                    & div {
+                        background-position: center;
+                        background-size: cover;
+                        height: 12px;
+                        width: 12px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        & .box {
+            display: none;
+        }
+    }
+}
