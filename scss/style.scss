@@ -32,14 +32,14 @@ header {
     }
 
     &>.container {
-        height: 300px;
+        height: 180px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         & .brand {
-            height: 150px;
-            width: 570px;
+            height: 120px;
+            width: 500px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -47,17 +47,17 @@ header {
 
             &__logo {
                 height: 100%;
-                width: 150px;
+                width: 120px;
                 border-radius: 50%;
                 background: #88f;
             }
 
             &__title {
-                font-size: 24px;
+                font-size: 20px;
                 font-family: "OpenSans", sans-serif;
 
                 &>.name {
-                    font-size: 36px;
+                    font-size: 32px;
                     font-weight: bold;
                     font-family: "Montserrat", sans-serif;
                 }
@@ -67,13 +67,16 @@ header {
         & .menu {
             margin: 0;
             padding: 0;
-            width: 280px;
+            width: 220px;
 
             & li {
                 display: flex;
-                padding-bottom: 10px;
                 position: relative;
                 justify-content: flex-start;
+
+                &+li {
+                    padding-top: 20px;
+                }
 
                 &::before {
                     background-size: cover;
@@ -83,21 +86,28 @@ header {
 
 
                 &:nth-of-type(1)>a>div {
-                    background-image: url('../img/gulpfile.js.png');
+                    background-image: url(../img/gulpfile.js.png);
+                    width: 10px;
+                    left: -20px;
                 }
 
                 &:nth-of-type(2)>a>div {
                     background-image: url('../img/globe.png');
+                    width: 14px;
+                    left: -22px;
                 }
 
                 &:nth-of-type(3)>a>div {
                     background-image: url('../img/telephone.png');
+                    width: 10px;
+                    left: -20px;
                 }
 
                 & a {
                     font-family: serif;
                     font-family: "OpenSans", sans-serif;
                     display: flex;
+                    position: relative;
 
                     &:hover {
                         opacity: 50%;
@@ -105,11 +115,10 @@ header {
 
 
                     & div {
+                        position: absolute;
                         background-position: center;
                         background-size: cover;
-                        height: 12px;
-                        width: 12px;
-                        margin-right: 10px;
+                        height: 14px;
                     }
                 }
             }
@@ -120,3 +129,55 @@ header {
         }
     }
 }
+
+.my {
+    width: 230px;
+
+    & >div {
+        padding-bottom: 10px;
+        &>.data{
+        font-family: "OpenSans", sans-serif;
+        font-size: 16px;}
+
+        &>.title {
+            padding: 15px 0 15px 50px;
+            font-size: 24px;
+            font-family: "Montserrat";
+            font-weight: 600;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../img/case.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                top: 8px;
+                left: 0;
+                width: 32px;
+                height: 32px;
+            }
+        }
+        
+    }
+    & .interest>.data{
+        display: flex;
+        justify-content: space-around;
+        & a {
+        width: 64px;
+        height: 64px;
+        text-align: center;
+        align-content: space-between;
+        & div{
+            background-image: url('../img/handset.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto 8px;
+            width: 40px;
+            height: 40px;
+        }
+
+    }
+}}
